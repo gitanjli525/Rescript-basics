@@ -69,7 +69,23 @@ g.contents = g.contents + "chopra";
 
 console.log(g);
 
+function convertBoolToString(val) {
+  if (val) {
+    return "true";
+  } else {
+    return "false";
+  }
+}
+
+console.log(true);
+
+console.log("status above");
+
+console.log("true++ status");
+
 console.log("true");
+
+console.log();
 
 var point1 = {
   x: 35,
@@ -100,7 +116,44 @@ var arrayA = [
 
 console.log(Core__Option.getOr(arrayA[0], 0).toString() + " 0th item array");
 
-var x = 5;
+console.log("hey, this is gitanjli, i am " + (23).toString() + " years old");
+
+for(var i = 0; i <= 10; ++i){
+  console.log(i);
+}
+
+for(var i$1 = 10; i$1 >= 0; --i$1){
+  console.log(i$1);
+}
+
+var val = {
+  contents: true
+};
+
+while(val.contents === true) {
+  console.log("true");
+  val.contents = false;
+};
+
+console.log("hello");
+
+console.log(1);
+
+var A = {
+  b: 4
+};
+
+var B = {
+  b: 5
+};
+
+function add(a, b) {
+  return 5 + b | 0;
+}
+
+function drawCircle(r) {
+  return "perfect circle";
+}
 
 var student1 = {
   name: "Gitanjli",
@@ -109,8 +162,31 @@ var student1 = {
 
 var age = 23;
 
+var status;
+
+var abc = 1;
+
+var x = 23;
+
+var position = [
+  1,
+  2,
+  2
+];
+
+var a = [
+  1,
+  2,
+  2
+];
+
+var b = [
+  "top",
+  "right",
+  "up"
+];
+
 exports.new_age = new_age$1;
-exports.x = x;
 exports.y = y;
 exports.message = message;
 exports.student1 = student1;
@@ -119,7 +195,19 @@ exports.myResult = myResult;
 exports.myFunction = myFunction;
 exports.result = result;
 exports.g = g;
+exports.convertBoolToString = convertBoolToString;
+exports.status = status;
 exports.point1 = point1;
 exports.point2 = point2;
 exports.arrayA = arrayA;
+exports.val = val;
+exports.abc = abc;
+exports.A = A;
+exports.B = B;
+exports.add = add;
+exports.drawCircle = drawCircle;
+exports.x = x;
+exports.position = position;
+exports.a = a;
+exports.b = b;
 /*  Not a pure module */
