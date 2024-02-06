@@ -155,6 +155,87 @@ function drawCircle(r) {
   return "perfect circle";
 }
 
+var payloadResults = [
+  {
+    TAG: "Ok",
+    _0: {
+      data: "hi"
+    }
+  },
+  {
+    TAG: "Ok",
+    _0: {
+      data: "bye"
+    }
+  },
+  {
+    TAG: "Error",
+    _0: "Something wrong happened"
+  }
+];
+
+var name3 = "gitan";
+
+var greet = " hello\n  world\n  &|}\n  \"\"\n  " + name3 + "\n ";
+
+console.log(greet);
+
+var str = String([
+      1,
+      2,
+      3
+    ]);
+
+console.log(str);
+
+console.log(String.fromCharCode(54620));
+
+console.log(String.fromCharCode(189, 43, 190, 61));
+
+console.log(String.fromCharCode(190));
+
+console.log(String.fromCharCode(-5));
+
+console.log(/* 'G' */71);
+
+console.log("a"[0]);
+
+var emp = "gitanjli";
+
+console.log(emp);
+
+var color_name = "orange";
+
+console.log(color_name);
+
+var pink = {
+  color: "pink",
+  length: 6
+};
+
+var vSCode = {
+  name: "Visual Studio Code",
+  worked_on: 0
+};
+
+vSCode.worked_on = vSCode.worked_on + 1 | 0;
+
+var baby = {
+  name: "Baby rescript",
+  age: 5
+};
+
+baby.age = baby.age + 1 | 0;
+
+var C_red = {
+  color: "red"
+};
+
+var C = {
+  baby: baby,
+  red: C_red
+};
+
 var student1 = {
   name: "Gitanjli",
   age: 23
@@ -186,6 +267,23 @@ var b = [
   "up"
 ];
 
+var firstchar = /* 'G' */71;
+
+var banana = {
+  taste: "sweet",
+  rank: 1
+};
+
+var red = {
+  color: "red",
+  length: 3
+};
+
+var orange = {
+  color: "orange",
+  length: 6
+};
+
 exports.new_age = new_age$1;
 exports.y = y;
 exports.message = message;
@@ -210,4 +308,17 @@ exports.x = x;
 exports.position = position;
 exports.a = a;
 exports.b = b;
+exports.payloadResults = payloadResults;
+exports.name3 = name3;
+exports.greet = greet;
+exports.str = str;
+exports.firstchar = firstchar;
+exports.banana = banana;
+exports.red = red;
+exports.emp = emp;
+exports.orange = orange;
+exports.color_name = color_name;
+exports.pink = pink;
+exports.vSCode = vSCode;
+exports.C = C;
 /*  Not a pure module */

@@ -197,3 +197,110 @@ type coordinates<'a> = ('a, 'a, 'a)
 
 let a: coordinates<int> = (1, 2, 2)
 let b: coordinates<string> = ("top", "right", "up")
+
+type res<'a, 'b> =
+  | Ok('a)
+  | Error('b)
+
+type myPayload = {data: string}
+
+type myPayloadResults<'errorType> = array<res<myPayload, 'errorType>>
+
+let payloadResults: myPayloadResults<string> = [
+  Ok({data: "hi"}),
+  Ok({data: "bye"}),
+  Error("Something wrong happened"),
+]
+
+type rec person = {
+  name: string,
+  friends: array<person>,
+}
+
+// type rec student = {taughtBy: teacher}
+// and teacher = {students: array<student>}
+
+let name3 = "gitan"
+
+let greet = ` hello
+  world
+  &|}
+  ""
+  ${name3}
+ `
+
+Js.log(greet)
+
+let str = String.make([1, 2, 3])
+Console.log(str)
+
+Console.log(String.fromCharCode(0xd55c))
+
+Console.log(String.fromCharCodeMany([189, 43, 190, 61]))
+Console.log(String.fromCharCodeMany([190]))
+Console.log(String.fromCharCode(-5))
+
+let firstchar = 'G'
+Js.log(firstchar)
+
+Js.log(String.get("a", 0))
+//Js.log(String.make(1, 'a'))
+
+type fruits = {
+  taste: string,
+  rank: int,
+}
+
+let banana = {
+  taste: "sweet",
+  rank: 1,
+}
+
+let red: G.colors = {
+  color: "red",
+  length: 3,
+}
+
+let emp: H.developer = "gitanjli"
+Console.log(emp)
+
+let orange = {G.color: "orange", G.length: 6}
+
+let color_name = orange.color
+Js.log(color_name)
+
+let pink = {...orange, color: "pink"}
+
+type editors = {
+  name: string,
+  mutable worked_on: int,
+}
+
+let vSCode = {
+  name: "Visual Studio Code",
+  worked_on: 0,
+}
+
+vSCode.worked_on = vSCode.worked_on + 1
+
+module C = {
+  type person = {
+    name: string,
+    mutable age: int,
+  }
+
+  let baby = {
+    name: "Baby rescript",
+    age: 5,
+  }
+  baby.age = baby.age + 1
+
+  type color = {
+    color: string,
+    length?: int,
+  }
+
+  let red = {
+    color: "red",
+  }
+}
