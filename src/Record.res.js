@@ -23,5 +23,20 @@ var A = {
   name: name
 };
 
+function nameFromD(d) {
+  return d.name;
+}
+
+var B_c = {
+  name: "gitanjli",
+  age: 23
+};
+
+var B = {
+  nameFromD: nameFromD,
+  c: B_c
+};
+
 exports.A = A;
+exports.B = B;
 /*  Not a pure module */
