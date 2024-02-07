@@ -16,11 +16,11 @@ module A = {
   let age = mei["age"]
 
   type student = {@set "age": int, @set "name": string}
-  //@module("./MyJsFile.js") external student1: student = "student1"
+  @module("./MyJsFile.js") external student1: student = "student1"
   //   @module("someJsFile") external student1: student = "student1"
-
-  //   student1["name"] = "gitanjli"
-  //   Js.log(student1["name"])
+  Js.log(student1)
+  //student1["name"] = "gitanjli"
+  //Js.log(student1["name"])
 
   type point2d = {"x": float, "y": float}
   type point3d = {...point2d, "z": float}
