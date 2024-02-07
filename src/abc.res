@@ -304,3 +304,87 @@ module C = {
     color: "red",
   }
 }
+
+module D = {
+  type person = {
+    age: int,
+    name: string,
+  }
+
+  let me = {
+    age: 23,
+    name: "gitanjli",
+  }
+
+  let new_me = {
+    ...me,
+    name: "new name",
+  }
+}
+
+module E = {
+  type person = {
+    age: int,
+    name?: string,
+  }
+  let me = {
+    age: 23,
+    name: "gitanjl",
+  }
+
+  //let maybeName = None
+  let maybeName = Some("gitanjli")
+
+  let without_name = {
+    ...me,
+    name: ?maybeName,
+  }
+
+  Console.log(without_name)
+
+  let isGita = switch without_name.name {
+  | Some("gitanjli") => true
+  | Some(_) | None => false
+  }
+  Js.log(isGita)
+
+  let isAge = switch without_name {
+  | {age: 23} => true
+  | _ => false
+  }
+  Js.log(isAge)
+
+  let nameWasSet = switch without_name {
+  | {name: ?None} => false
+  | {name: ?Some(_)} => true
+  }
+  Js.log(nameWasSet)
+}
+
+let add = %raw("(a,b) => a+b")
+Js.log(add(5, 7))
+
+// %%raw("const a = 5")
+// Js.log(a)
+
+module F = {
+  type a = {
+    id: string,
+    name: string,
+  }
+
+  type b = {age: int}
+
+  type c = {
+    ...a,
+    ...b,
+    working: bool,
+  }
+
+  let typeCobj = {
+    id: "git",
+    name: "gitanjli",
+    age: 23,
+    working: true,
+  }
+}
