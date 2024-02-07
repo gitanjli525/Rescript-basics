@@ -12,10 +12,19 @@ var mei = {
 
 var age = mei.age;
 
+var mypoint = {
+  x: 3.3,
+  y: 2.4,
+  z: 4.22
+};
+
+console.log(mypoint);
+
 var A = {
   me: me,
   mei: mei,
-  age: age
+  age: age,
+  mypoint: mypoint
 };
 
 exports.A = A;

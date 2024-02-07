@@ -14,4 +14,20 @@ module A = {
   }
 
   let age = mei["age"]
+
+  type student = {@set "age": int, @set "name": string}
+  //@module("./MyJsFile.js") external student1: student = "student1"
+  //   @module("someJsFile") external student1: student = "student1"
+
+  //   student1["name"] = "gitanjli"
+  //   Js.log(student1["name"])
+
+  type point2d = {"x": float, "y": float}
+  type point3d = {...point2d, "z": float}
+  let mypoint: point3d = {
+    "x": 3.3,
+    "y": 2.4,
+    "z": 4.22,
+  }
+  Js.log(mypoint)
 }
