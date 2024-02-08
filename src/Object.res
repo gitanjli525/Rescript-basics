@@ -31,3 +31,10 @@ module A = {
   }
   Js.log(mypoint)
 }
+
+module B = {
+  //   @val external document: 'a = "document"
+  //   document["addEventListener"]("mouseup", _event => {Console.log("clicked!")})
+  //   let loc = document["location"]
+  //   document["location"]["href"] = "rescript-lang.org"
+}

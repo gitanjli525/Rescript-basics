@@ -33,5 +33,8 @@ var A = {
   mypoint: mypoint
 };
 
+var B = {};
+
 exports.A = A;
+exports.B = B;
 /* age Not a pure module */
