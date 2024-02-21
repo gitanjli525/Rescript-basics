@@ -23,3 +23,12 @@ let render = mycolor => {
 //   | #yellow => Console.log("this is yellow")
 //   }
 // }
+
+type account = [
+  | #Anonymous
+  | #Instagram(string)
+  | #Facebook(string, int)
+]
+
+let me: account = #Instagram("gitanjli")
+let my: account = #Facebook("gitu", 23)

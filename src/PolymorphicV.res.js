@@ -18,8 +18,23 @@ var mylabel = "aria-hidden";
 
 var mynumber = 7;
 
+var me = {
+  NAME: "Instagram",
+  VAL: "gitanjli"
+};
+
+var my = {
+  NAME: "Facebook",
+  VAL: [
+    "gitu",
+    23
+  ]
+};
+
 exports.mycolor = mycolor;
 exports.mylabel = mylabel;
 exports.mynumber = mynumber;
 exports.render = render;
+exports.me = me;
+exports.my = my;
 /* No side effect */
